@@ -1,0 +1,29 @@
+
+
+<body>
+
+{% extends 'main/header.html' %}
+
+{% block content %}
+
+	<div class="row">
+    {% for tut in tutorials %}
+      <div class="col s12 m6 l3">
+          <div class="card white darken-1 hoverable">
+            <div class="card-content blue-text">
+                <span class="card-title">{{tut.tutorial_title}}</span>
+          <p>{{tut.tutorial_published}}</p>
+          <p>{{tut.tutorial_content|safe}}</p>
+          <p style="font-size:70%">Published {{tut.tutorial_published}}</p>
+          
+             
+            </div>
+          </div>
+      </div>
+      {% endfor %}
+{% endblock %}
+  	</div>
+
+
+</body>
+
